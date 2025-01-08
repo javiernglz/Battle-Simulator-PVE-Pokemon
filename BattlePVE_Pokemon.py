@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from random import randint
 
 #Pokemon CPU
@@ -81,7 +83,7 @@ while vida_jugador > 0 and vida_cpu > 0:
     print(f"Turno del rival ({pokemon_cpu})")
     ataque_cpu = randint (1, 4)
     ataque_info = list(POKEMON_CPU[pokemon_cpu]["ataques"].values())[ataque_cpu - 1]
-    print(f"{pokemon_cpu} ataca con {ataque_info["nombre"]}")
+    print(f"{pokemon_cpu} ataca con {ataque_info['nombre']}")
     vida_jugador = max(0, vida_jugador - ataque_info["daño"])
 
     barra_de_vida_jugador = int(vida_jugador * TAMANIO_BARRA / POKEMON_J[pokemon_jugador]["vida"])
